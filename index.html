@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
+    <title>BIGSHADOW LABS - ShadowCore OS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="./ui/shared/global.css">
+    <link rel="stylesheet" href="./ui/shell/terminal.css">
+    <link rel="stylesheet" href="./ui/bios/bios.css">
+
+    <link rel="shortcut icon" href="./assets/img/favicon/bsl.svg" type="image/svg">
+</head>
+
+<body class="system-monitor">
+    
+    <div class="crt-overlay"></div>
+
+    <div id="terminal-chassis">
+<div class="system-leds-container">
+                <div class="led-indicator top" id="led-top"></div>
+                <div class="led-indicator right" id="led-right"></div>
+                <div class="led-indicator bottom" id="led-bottom"></div>
+                <div class="led-indicator left" id="led-left"></div>
+            </div> 
+        <div id="sys-bar">
+            <div class="sys-info">BSL_OS // KERNEL_V2.0 // STABLE_CONNECTION</div>
+            <div class="sys-decorations">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+        </div>
+
+        <header id="sys-header">
+            <div class="header-content">
+                <div class="sys-branding">
+                    <img src="./assets/img/logo_bsl/mono.webp" class="header-logo" alt="BSL">
+                    <span class="sys-title">SHADOWCORE</span>
+                </div>
+            <nav class="nav-cluster">
+                <button data-process="genesis" class="nav-btn">GENESIS</button>
+                <button data-process="trinity" class="nav-btn">TRINITYOX</button>
+                <button data-process="protocol" class="nav-btn">PROTOCOL-ALFA</button>
+            </nav>
+            </div>
+        </header>
+
+        <main id="process-viewport">
+            </main>
+
+        <footer id="sys-footer">
+                <div class="status-line">
+                    <span class="corp-id">BIGSHADOW LABS ©</span>
+                    <span class="div-id">SHADOWCORE DIV.</span>
+                    <span id="led-status-text" class="sys-status">SYSTEM_READY</span>
+                </div>
+            
+                <div class="footer-block center social-grid">
+                    <a href="https://web.facebook.com/profile.php?id=61572703776574" target="_blank" class="social-icon" title="Facebook">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/bigshadowlabs/" target="_blank" class="social-icon" title="Instagram">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2m0,2A3.8,3.8 0 0,0 4,5.8V16.2A3.8,3.8 0 0,0 7.8,20H16.2A3.8,3.8 0 0,0 20,16.2V5.8A3.8,3.8 0 0,0 16.2,4H7.8m8.2,16A2,2 0 0,1 14,18A2,2 0 0,1 16,16A2,2 0 0,1 18,18A2,2 0 0,1 16,20M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+                    </a>
+                    <a href="https://discord.gg/PT5UKsegJ8" target="_blank" class="social-icon" title="Discord">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.13 7.44,7.13C7.44,7.13 6.18,10.64 6.18,10.64C7.77,11.87 9.87,11.5 9.87,11.5C9.87,11.5 10.19,11.13 10.45,10.74C8.63,10.5 7.91,9.86 7.91,9.86C7.91,9.86 8.16,10 12,10C15.86,10 16.1,9.86 16.1,9.86C16.1,9.86 15.39,10.5 13.56,10.74C13.84,11.13 14.15,11.5 14.15,11.5C14.15,11.5 16.25,11.87 17.84,10.64C17.84,10.64 16.58,7.13 16.58,7.13C16.58,7.13 14.7,6.8 12,6.8M9.64,8.5C10.27,8.5 10.79,9.03 10.79,9.66C10.79,10.29 10.27,10.82 9.64,10.82C9,10.82 8.49,10.29 8.49,9.66C8.49,9.03 9,8.5 9.64,8.5M14.38,8.5C15,8.5 15.53,9.03 15.53,9.66C15.53,10.29 15,10.82 14.38,10.82C13.75,10.82 13.23,10.29 13.23,9.66C13.23,9.03 13.75,8.5 14.38,8.5Z"/></svg>
+                    </a>
+                    <a href="https://x.com/BigshadowLabs" target="_blank" class="social-icon" title="X / Twitter">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://github.com/CipherShadow27" target="_blank" class="social-icon" title="GitHub">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                    </a>
+                    <a href="https://www.patreon.com/cw/BigShadowLabs" target="_blank" class="social-icon" title="Patreon">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M14.82 2.41c3.81 0 6.9 3.09 6.9 6.9 0 3.81-3.09 6.9-6.9 6.9-3.81 0-6.9-3.09-6.9-6.9 0-3.81 3.09-6.9 6.9-6.9zM2.32 21.59h4.06V2.41H2.32v19.18z"/></svg>
+                    </a>
+                </div>
+            
+                <div class="footer-block right">
+                    <div id="clock">00:00:00</div>
+                </div>
+        </footer>
+    </div>
+
+    <script src="./core/kernel/shadowcore.js" type="module"></script>
+    <script src="./ui/bios/bios.js" type="module"></script>
+
+</body>
+</html>
+
